@@ -1,0 +1,13 @@
+menuconfig GAZEBO_SENSOR_DRIVERS
+    bool "Gazebo sensor drivers"
+    default y
+
+if GAZEBO_SENSOR_DRIVERS
+
+config GZ_IMU_SENSOR
+    bool "Gazebo IMU sensor"
+    default y
+    depends on DT_HAS_GZ_IMU_ENABLED
+    depends on SENSOR
+
+endif # GAZEBO_SENSOR_DRIVERS

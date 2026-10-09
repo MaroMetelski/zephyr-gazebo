@@ -1,0 +1,4 @@
+zephyr_library_named(gz_bridge)
+
+zephyr_library_sources_ifdef(CONFIG_GAZEBO_BRIDGE gz_bridge_impl.c)
+zephyr_library_sources_ifdef(CONFIG_GAZEBO_BRIDGE_LINK_SOCKETS gz_link_sockets.c)

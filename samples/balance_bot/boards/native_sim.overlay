@@ -1,0 +1,17 @@
+/ {
+    aliases {
+        bridge = &gz_bridge;
+        imu = &imu;
+    };
+
+    gz_bridge: gz_bridge {
+        compatible = "gz-bridge";
+        status = "okay";
+
+        imu: gz_imu {
+            compatible = "gz-imu";
+            status = "okay";
+            topic = "/imu";
+        };
+    };
+};
