@@ -1,0 +1,7 @@
+topics:
+  - topic_name: "/wheel_right"
+    messages: Double
+    type: publish
+  - topic_name: "/wheel_left"
+    messages: Double
+    type: publish

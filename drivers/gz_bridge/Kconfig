@@ -1,0 +1,22 @@
+config GAZEBO_BRIDGE
+    bool "Gazebo bridge implementation"
+    depends on NANOPB
+    depends on ZBUS_RUNTIME_CHANNEL_REGISTRATION
+    depends on ZBUS_ASYNC_LISTENER
+    depends on ZBUS_RUNTIME_OBSERVERS
+    depends on ZBUS_CHANNEL_NAME
+    depends on ZBUS_CHANNEL_ID
+
+if GAZEBO_BRIDGE
+
+config GAZEBO_BRIDGE_LINK_SOCKETS
+    bool "Gazebo link using sockets"
+    default y
+    depends on NET_SOCKETS
+    depends on NET_TCP
+    depends on EVENTFD
+    depends on (ZVFS_EVENTFD_MAX >= 1)
+    depends on (ZVFS_POLL_MAX >= 2)
+    depends on (NET_IF_UNICAST_IPV4_ADDR_COUNT >= 2)
+
+endif # GAZEBO_BRIDGE

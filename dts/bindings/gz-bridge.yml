@@ -1,0 +1,9 @@
+description: |
+  Gazebo bridge. Provides a communication channel between a running Gazebo world
+  and it's components and the corresponding Zephyr drivers.
+
+include: base.yaml
+
+compatible: "gz-bridge"
+
+bus: gz-bridge

@@ -1,0 +1,4 @@
+description: |
+    Common gazebo device properties
+
+on-bus: gz-bridge

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "any.proto";
+
+/* Wrapper message for gazebo messages */
+message GazeboMessage {
+    string topic = 1;
+    google.protobuf.Any payload = 2;
+}

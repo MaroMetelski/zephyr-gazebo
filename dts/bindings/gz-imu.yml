@@ -1,0 +1,11 @@
+description: |
+    Gazebo IMU sensor
+
+compatible: "gz-imu"
+
+include: [gz-device.yml, sensor-device.yaml]
+
+properties:
+  topic:
+    type: string
+    required: true
