@@ -1,0 +1,9 @@
+menuconfig GAZEBO_DRIVERS
+    bool "Gazebo bridge and drivers"
+
+if GAZEBO_DRIVERS
+
+rsource "gz_bridge/Kconfig"
+rsource "sensor/Kconfig"
+
+endif # GAZEBO_DRIVERS

@@ -1,0 +1,30 @@
+# A topic map is used to specify what topics to subcribe and advertise with Gazebo.
+# This file provides map for topics that are used by the drivers provided by this module.
+#
+# Users can provide an own map to the script to bridge custom topics.
+#
+# There are two types of entries: a "driver topic" and an "application topic".
+#
+# A "driver topic" is used by a device driver, and the name of the topic is specified in a
+# devicetree property. A "driver topic" entry has two specific fields - "compatible",
+# which specifies the compatible of the device and "topic_property", which specifies
+# which devicetree property contains the name of the topic.
+# The bridge script will find the drivers present in .dts file and pull the
+# topic names from there. This allows to customise topic name without changing the map
+# entry for the topic. You can specify more than one topic for the same compatible.
+#
+# topics:
+#   -   topic_name: "/joint"  # application topic
+#       messages: [Double]
+#       type: publish
+#
+#   -   compatible: "gz-imu"  # driver topic
+#       topic_property: "topic"
+#       messages: [IMU]
+#       type: subscribe
+
+topics:
+  - compatible: gz-imu
+    topic_property: topic
+    messages: IMU
+    type: subscribe

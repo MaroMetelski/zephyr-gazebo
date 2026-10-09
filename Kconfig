@@ -1,0 +1,2 @@
+rsource "drivers/sensor/Kconfig"
+rsource "drivers/gz_bridge/Kconfig"
