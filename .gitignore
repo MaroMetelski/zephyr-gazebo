@@ -1,0 +1,7 @@
+/zephyr/
+tools/
+.west/
+.venv/
+__pycache__/
+build/
+modules/

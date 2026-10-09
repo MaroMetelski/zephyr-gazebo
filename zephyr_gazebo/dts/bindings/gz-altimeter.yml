@@ -1,0 +1,11 @@
+description: |
+    Gazebo altimeter sensor
+
+compatible: "gz-alitmeter"
+
+include: [gz-device.yml, sensor-device.yaml]
+
+properties:
+  topic:
+    type: string
+    required: true

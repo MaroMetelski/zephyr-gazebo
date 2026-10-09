@@ -1,0 +1,5 @@
+config GZ_IMU_SENSOR
+    bool "Gazebo IMU sensor"
+    default y
+    depends on DT_HAS_GZ_IMU_ENABLED
+    depends on SENSOR
