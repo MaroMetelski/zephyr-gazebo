@@ -1,3 +1,5 @@
+![Project logo](doc/img/gz-zephyr-logo.drawio.png)
+
 # Zephyr RTOS + Gazebo simulator
 
 This project provides integration between Zephyr RTOS and Gazebo for the purpose
