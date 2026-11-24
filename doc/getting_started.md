@@ -28,6 +28,7 @@ The project can be used standalone (for example when working on the `zephyr-gaze
 In that case set up the west workspace with `zephyr-gazebo` as base:
 
 ```bash
+mkdir zephyr-gazebo-workspace && cd zephyr-gazebo-workspace
 west init -m https://github.com/MaroMetelski/zephyr-gazebo.git
 west update
 ```
@@ -76,3 +77,11 @@ west build -t run
 ### Run the simulation
 
 Click the "play" button in the Gazebo window.
+
+
+## Imporant notice
+
+It's important to remember that the testing will work best when combined with accurate gazebo models
+and worlds, and even very accurate models will probably need separate tuning values for the
+algorithms. Do not assume that, if the simulation work, the physical system will also work!
+Take care when working with actual hardware.
